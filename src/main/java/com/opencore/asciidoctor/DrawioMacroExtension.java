@@ -8,7 +8,7 @@ public class DrawioMacroExtension implements ExtensionRegistry {
   @Override
   public void register(Asciidoctor asciidoctor) {
     final JavaExtensionRegistry javaExtensionRegistry = asciidoctor.javaExtensionRegistry();
-    javaExtensionRegistry.blockMacro("drawio", DrawioMacro.class);
+    javaExtensionRegistry.block("drawio", new DrawioMacro("drawio", null) );
 
   }
 }
